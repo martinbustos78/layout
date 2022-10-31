@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px auto;
+  padding: 0;
+  font-family: Arial;
+ /*  max-width: 90%; */
+}
+
+/* Style the header */
+header {
+  background-color:yellow;
+  padding: 10px;
+  text-align: center;
+}
+nav {
+  margin-top: 20px;
+  overflow: hidden;
+  background-color: rgb(21, 212, 208);
+}
+
+/* Style the topnav links */
+nav a {
+  font-size: 25px;  
+  float: left;
+  display: block;
+  color:blue;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+nav a:hover {
+  background-color: rgb(238, 194, 225);
+  color: black;
+}
+/* Crea tres columnas con el 33.33%*/
+.columna {
+  float: left;
+  padding: 15px;
+  
+ 
+}
+
+/* Left and right column */
+.columna.derecha {
+  width: 25%;
+  
+}
+.columna.izquierda {
+  width: 25%;
+  
+}
+
+/* Middle column */
+.columna.delmedio {
+  width: 50%;
+  
+}
+  /* Limpia los float despues de las columnas */
+.columna.delmedio h2{
+  text-align: center;
+}
+.linea:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #7da7e7;
+  padding: 10px;
+  text-align: center;
+  position: fixed; 
+  bottom: 0;
+  width: 100%;
+  
+}
+
+/*Responsive Design despues de los 600px */
+@media screen and (max-width:700px) {
+    .columna.derecha, .columna.izquierda , .columna.delmedio {
+    width: 100%;
+   
+   
+  }
+  .columna.delmedio h2{
+    text-align: left;
+  }
+  .columna.derecha{
+    margin-bottom: 80px;
+  }
+}
+
+</style>
+<body>
+        <header>
+            <h1>Esta es la parte del Encabezado</h1>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Noticias</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="linea">
+            <div class="columna izquierda">
+              <h2>Columna Izquierda</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga blanditiis minima ducimus vero animi? Enim omnis similique quae modi eaque ducimus accusantium. Accusamus eum harum officiis numquam natus, eius maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis dolores ipsam dicta reprehenderit mollitia veniam ratione quos itaque aliquam debitis! Rerum nostrum beatae incidunt asperiores facilis praesentium non, ab recusandae.</p>
+            </div>
+            
+            <div class="columna delmedio">
+              <h2>Columna del Medio</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptates culpa eos, fuga, repellendus a fugit nisi nemo unde sequi nulla provident? Dolores omnis magni impedit iste temporibus iusto suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, maiores fuga. Et velit quibusdam commodi repudiandae magni labore provident tempora, corporis aspernatur. Aliquid ducimus natus est quibusdam illo enim recusandae?
+            
+              </p>
+            </div>
+            
+            <div class="columna derecha">
+              <h2>Columna de la Derecha</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam reiciendis vel vero incidunt, voluptas recusandae aut dolor aperiam voluptatem consequatur molestiae iusto soluta, eveniet ipsum. Quibusdam est numquam modi atque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit, laudantium reprehenderit blanditiis labore, neque eius rem, voluptates quae sed accusamus eaque nihil excepturi minus explicabo. Excepturi officia rem commodi?</p>
+            </div>
+            
+        </div>
+        
+        <footer>
+            <p>Este es el pie de página.</p>
+        </footer>
+            
+
+    
+</body>
+</html>
